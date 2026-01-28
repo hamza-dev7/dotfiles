@@ -1,4 +1,4 @@
-## dotfiles
+# dotfiles
 
-# run after cloning
+## run after cloning
 git submodule update --init --recursive
