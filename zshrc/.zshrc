@@ -7,7 +7,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
 # Load modular config
 source "$ZSH_CONFIG/env.zsh"
 source "$ZSH_CONFIG/history.zsh"
