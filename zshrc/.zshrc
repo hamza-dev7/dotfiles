@@ -14,5 +14,4 @@ source "$ZSH_CONFIG/completions.zsh"
 source "$ZSH_CONFIG/plugins.zsh"
 source "$ZSH_CONFIG/aliases.zsh"
 source "$ZSH_CONFIG/prompt.zsh"
-source "$ZSH_CONFIG/secrets.zsh"
 
