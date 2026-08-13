@@ -98,7 +98,7 @@ layout {
 
 
 spawn-sh-at-startup "qs -c noctalia-shell &"
-spawn-sh-at-startup "swww-daemon &"
+spawn-sh-at-startup "awww-daemon &"
 // spawn-sh-at-startup "swww-daemon -n overlay &"
 
 
@@ -206,6 +206,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+E hotkey-overlay-title="Run a Code Editor: vscodium" { spawn "codium"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+B hotkey-overlay-title="Run an Browser: firefox" { spawn "firefox"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
