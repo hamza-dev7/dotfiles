@@ -97,7 +97,7 @@ layout {
 }
 
 
-spawn-sh-at-startup "qs -c noctalia-shell &"
+spawn-sh-at-startup "noctalia"
 spawn-sh-at-startup "awww-daemon &"
 // spawn-sh-at-startup "swww-daemon -n overlay &"
 

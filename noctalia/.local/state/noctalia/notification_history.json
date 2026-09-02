@@ -1,0 +1,32 @@
+{
+  "change_serial": 2,
+  "entries": [
+    {
+      "active": false,
+      "close_reason": "expired",
+      "event_serial": 2,
+      "notification": {
+        "actions": [
+          "default",
+          "Activate"
+        ],
+        "app_name": "Firefox",
+        "body": "You have signed in successfully",
+        "category": null,
+        "desktop_entry": "firefox",
+        "expiry_wall_ms": 1788127386453,
+        "icon": null,
+        "id": 2,
+        "image_data": null,
+        "origin": "external",
+        "received_wall_ms": 1788127380453,
+        "summary": "Account",
+        "timeout": 6000,
+        "urgency": "normal"
+      },
+      "seen": true
+    }
+  ],
+  "next_id": 7,
+  "version": 2
+}
