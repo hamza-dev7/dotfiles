@@ -3,7 +3,7 @@
 alias zed='zeditor'
 alias ls='exa -l'
 alias cd='z'
-alias rb='sudo nixos-rebuild switch'
+alias rb='sudo nixos-rebuild switch --impure'
 
 # Shortcuts for common git commands
 alias ga='git add'
