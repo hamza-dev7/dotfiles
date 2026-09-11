@@ -7,6 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "debugger": {
+    "button": false
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
   "icon_theme": "Material Icon Theme",
   "collaboration_panel": {
     "button": false
@@ -15,6 +21,7 @@
     "dock": "left"
   },
   "agent": {
+    "sidebar_side": "right",
     "dock": "right",
     "favorite_models": [],
     "model_parameters": []
