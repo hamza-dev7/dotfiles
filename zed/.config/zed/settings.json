@@ -7,6 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "opencode": {
+      "default_config_options": {
+        "model": "opencode/nemotron-3-ultra-free"
+      },
+      "type": "registry"
+    }
+  },
   "scroll_sensitivity": 2.0,
   "debugger": {
     "button": false
@@ -32,6 +40,6 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "One Dark Pro Max",
+    "dark": "Vercel Dark",
   },
 }
