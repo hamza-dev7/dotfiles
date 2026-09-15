@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_line_height": "comfortable",
+  "buffer_font_weight": 300.0,
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "agent_servers": {
     "opencode": {
       "default_config_options": {
@@ -36,10 +39,10 @@
     "model_parameters": []
   },
   "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "buffer_font_size": 14.0,
   "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "Vercel Dark",
+    "mode": "system",
+    "light": "Vercel Dark",
+    "dark": "Vercel Dark"
   },
 }
