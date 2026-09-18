@@ -171,7 +171,7 @@ window-rule {
 
 window-rule {
 
-    match app-id=r#"^app\.zen_browser\.zen"#
+    match app-id=r#"^zen"#
     default-column-width {
         proportion 1.0
     }
@@ -190,16 +190,16 @@ window-rule {
 
 layer-rule {
 
-    match namespace="^swww-daemon$"
+    match namespace="^awww-daemon$"
     place-within-backdrop true
 }
 
 
 overview {
     workspace-shadow {
-        color "#ffffff50"
-        softness 5
-        spread 2
+        color "#8e0cc6"
+        softness 1
+        spread 5
         offset x=0 y=0
     }
     zoom 0.35
@@ -211,8 +211,8 @@ binds {
 
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+E hotkey-overlay-title="Run a Code Editor: vscodium" { spawn "codium"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Mod+B hotkey-overlay-title="Run an Browser: firefox" { spawn "firefox"; }
+    Mod+D hotkey-overlay-title="Run a Launcher: rofi" { spawn-sh "/home/sicko/.config/rofi/launchers/type-1/launcher.sh"; }
+    Mod+B hotkey-overlay-title="Run an Browser: zen browser" { spawn "zen"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
