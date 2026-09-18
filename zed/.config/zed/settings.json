@@ -10,7 +10,7 @@
   "cli_default_open_behavior": "new_window",
   "buffer_line_height": "comfortable",
   "buffer_font_weight": 300.0,
-  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_family": "JetBrainsMono Nerd Font Propo",
   "agent_servers": {
     "opencode": {
       "default_config_options": {
