@@ -83,10 +83,10 @@ layout {
 
 
     struts {
-        left -4
-        right -4
-        top -3
-        bottom 0
+        left -5
+        right -5
+        top -4
+        bottom -5
     }
 
     tab-indicator {
@@ -101,6 +101,9 @@ spawn-sh-at-startup "noctalia"
 spawn-sh-at-startup "awww-daemon &"
 // spawn-sh-at-startup "swww-daemon -n overlay &"
 
+environment {
+  QT_QPA_PLATFORMTHEME "qt6ct"
+}
 
 hotkey-overlay {
     skip-at-startup
@@ -113,8 +116,8 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // screenshot-path null
 
 cursor {
-    xcursor-theme "Adwaita"
-    xcursor-size 24
+    xcursor-theme "Qogir"
+    xcursor-size 22
 }
 
 animations {
@@ -178,6 +181,14 @@ window-rule {
 }
 
 window-rule {
+
+    match app-id=r#"^dev.zed.Zed"#
+    default-column-width {
+        proportion 1.0
+    }
+}
+
+window-rule {
     match app-id=r#"^firefox"# title="^Picture-in-Picture$"
     open-floating true
 }
@@ -210,7 +221,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+E hotkey-overlay-title="Run a Code Editor: vscodium" { spawn "codium"; }
+    Mod+E hotkey-overlay-title="Run a Code Editor: zed editor" { spawn "zeditor"; }
     Mod+D hotkey-overlay-title="Run a Launcher: rofi" { spawn-sh "/home/sicko/.config/rofi/launchers/type-1/launcher.sh"; }
     Mod+B hotkey-overlay-title="Run an Browser: zen browser" { spawn "zen"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
