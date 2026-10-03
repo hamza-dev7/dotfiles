@@ -182,6 +182,14 @@ window-rule {
 
 window-rule {
 
+    match app-id=r#"^helium"#
+    default-column-width {
+        proportion 1.0
+    }
+}
+
+window-rule {
+
     match app-id=r#"^dev.zed.Zed"#
     default-column-width {
         proportion 1.0
@@ -208,7 +216,7 @@ layer-rule {
 
 overview {
     workspace-shadow {
-        color "#8e0cc6"
+        color "#a260f3"
         softness 1
         spread 5
         offset x=0 y=0
