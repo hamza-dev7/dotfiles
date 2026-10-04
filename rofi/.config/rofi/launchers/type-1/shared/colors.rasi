@@ -15,4 +15,4 @@
 
 /* Import color-scheme from `colors` directory */
 
-@import "~/.config/rofi/colors/mauve.rasi"
+@import "~/.config/rofi/colors/murasami.rasi"
