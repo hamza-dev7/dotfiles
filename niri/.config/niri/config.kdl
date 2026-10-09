@@ -115,10 +115,11 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 // screenshot-path null
 
-cursor {
-    xcursor-theme "Qogir"
-    xcursor-size 22
-}
+// Decomment for nixos
+//cursor {
+//    xcursor-theme "Qogir"
+//    xcursor-size 22
+//}
 
 animations {
     off
@@ -230,9 +231,9 @@ binds {
 
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+E hotkey-overlay-title="Run a Code Editor: zed editor" { spawn "zeditor"; }
-    Mod+D hotkey-overlay-title="Run a Launcher: rofi" { spawn-sh "/home/sicko/.config/rofi/launchers/type-1/launcher.sh"; }
+    Mod+D hotkey-overlay-title="Run a Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+B hotkey-overlay-title="Run an Browser: zen browser" { spawn "zen"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+Alt+L hotkey-overlay-title="Show noctalia session menu" { spawn-sh "noctalia msg panel-toggle session"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
@@ -396,6 +397,8 @@ binds {
 
     Mod+Shift+P { power-off-monitors; }
 }
+
+
 
 
 

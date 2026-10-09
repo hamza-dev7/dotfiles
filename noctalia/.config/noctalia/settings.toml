@@ -5,7 +5,7 @@ ui_scale = 0.95000000670552254
 
 [bar.default]
 capsule = true
-capsule_fill = "shadow"
+capsule_fill = "surface_variant"
 capsule_foreground = "primary"
 capsule_radius = 10
 center = [ "group:g4" ]
@@ -16,7 +16,7 @@ radius_bottom_right = 7
 radius_top_left = 0
 radius_top_right = 0
 scale = 0.95000000670552254
-start = [ "launcher", "date", "active_window" ]
+start = [ "date", "active_window" ]
 thickness = 27
 
     [[bar.default.capsule_group]]
@@ -114,9 +114,8 @@ popup_borders = false
     enabled = false
 
 [theme]
-builtin = "Dracula"
-community_palette = "Aura"
-source = "community"
+custom_palette = "Murasami"
+source = "custom"
 
     [theme.templates]
     builtin_ids = [ "kitty", "niri" ]

@@ -43,8 +43,8 @@
   "ui_font_size": 16,
   "buffer_font_size": 14.0,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Vercel Dark",
-    "dark": "Vercel Dark"
+    "dark": "Vercel Carbon Dark"
   },
 }
