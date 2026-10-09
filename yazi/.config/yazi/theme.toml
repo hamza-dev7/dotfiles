@@ -1,0 +1,7 @@
+[icon]
+prepend_dirs = [
+  { name = "downloads", text = "", fg = "#03b2f2" },
+  { name = "documents", text = "", fg = "#03b2f2" },
+  { name = "projects",  text = "", fg = "#03b2f2" },
+  { name = "pictures",  text = "", fg = "#03b2f2" },
+]
