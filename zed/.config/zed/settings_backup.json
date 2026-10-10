@@ -7,9 +7,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "completions": {
-    "lsp": true
-  },
   "cli_default_open_behavior": "new_window",
   "buffer_line_height": "comfortable",
   "buffer_font_weight": 300.0,
@@ -38,9 +35,7 @@
     "dock": "left"
   },
   "agent": {
-    "threads_sidebar": {
-      "position": "right"
-    },
+    "sidebar_side": "right",
     "dock": "right",
     "favorite_models": [],
     "model_parameters": []
@@ -52,8 +47,4 @@
     "light": "Vercel Dark",
     "dark": "Vercel Carbon Dark"
   },
-  "edit_predictions": {
-    "mode": "eager",
-    "provider": "zed"
-  }
 }
