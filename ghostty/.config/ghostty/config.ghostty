@@ -1,0 +1,12 @@
+font-family = "Jetbrains Mono Nerd Font Propo"
+font-size = 12
+
+window-padding-y = 10,0
+window-padding-x = 10
+
+confirm-close-surface = false
+adjust-cell-height = 0
+
+#theme = Catppuccin Mocha
+
+theme = noctalia

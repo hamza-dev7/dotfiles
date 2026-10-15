@@ -39,7 +39,7 @@ input {
 
 layout {
 
-    gaps 7
+    gaps 3
 
     center-focused-column "never"
 
@@ -61,6 +61,12 @@ layout {
 
     focus-ring {
         off
+
+        width 2
+        active-color "#ffc87f"
+        inactive-color "#505050"
+
+        urgent-color "#9b0000"
     }
 
     border {
@@ -81,12 +87,18 @@ layout {
         // on
     }
 
+    // struts {
+    //     left 0
+    //     right 0
+    //     top 2
+    //     bottom 0
+    // }
 
     struts {
-        left -5
-        right -5
-        top -4
-        bottom -5
+        left 0
+        right 0
+        top 1
+        bottom 0
     }
 
     tab-indicator {
@@ -122,17 +134,16 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 //}
 
 animations {
-    off
+    // off
 
     horizontal-view-movement {
         // off
         spring damping-ratio=1.0 stiffness=10000 epsilon=0.001
     }
 
-
     workspace-switch {
         off
-        // spring damping-ratio=1.0 stiffness=10000 epsilon=0.001
+        spring damping-ratio=1.0 stiffness=10000 epsilon=0.001
     }
 
     window-open {
@@ -168,43 +179,16 @@ animations {
 window-rule {
 
     match app-id=r#"^firefox"#
-    default-column-width {
-        proportion 1.0
-    }
-}
-
-window-rule {
-
     match app-id=r#"^zen"#
-    default-column-width {
-        proportion 1.0
-    }
-}
-
-window-rule {
-
     match app-id=r#"^helium"#
-    default-column-width {
-        proportion 1.0
-    }
-}
-
-window-rule {
-
+    match app-id=r#"^brave-origin"#
     match app-id=r#"^dev.zed.Zed"#
-    default-column-width {
-        proportion 1.0
-    }
-}
-
-window-rule {
-    match app-id=r#"^firefox"# title="^Picture-in-Picture$"
-    open-floating true
+    open-maximized true
 }
 
 
 window-rule {
-    geometry-corner-radius 8
+    geometry-corner-radius 0
     clip-to-geometry true
 }
 
@@ -232,8 +216,8 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+E hotkey-overlay-title="Run a Code Editor: zed editor" { spawn "zeditor"; }
     Mod+D hotkey-overlay-title="Run a Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+Shift+D hotkey-overlay-title="Run a Launcher: rofi" { spawn-sh "/home/sicko/.config/rofi/launchers/type-1/launcher.sh"; }
-    Mod+B hotkey-overlay-title="Run an Browser: helium browser" { spawn "helium-browser"; }
+    Mod+Alt+D hotkey-overlay-title="Run a Launcher: rofi" { spawn-sh "/home/sicko/.config/rofi/launchers/type-5/launcher.sh"; }
+    Mod+B hotkey-overlay-title="Run an Browser: brave-origin" { spawn "brave-origin"; }
     Mod+Alt+L hotkey-overlay-title="Show noctalia session menu" { spawn-sh "noctalia msg panel-toggle session"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
