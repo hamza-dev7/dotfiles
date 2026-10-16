@@ -1,4 +1,3 @@
-
 input {
     keyboard {
         xkb {
@@ -38,11 +37,8 @@ input {
 
 
 layout {
-
     gaps 3
-
     center-focused-column "never"
-
     background-color "transparent"
 
     preset-column-widths {
@@ -51,38 +47,27 @@ layout {
         proportion 0.66667
     }
 
-    // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
     preset-window-heights {
         proportion 0.5
         proportion 1.0
     }
 
-    // default-column-width { proportion 0.5; }
-
     focus-ring {
         off
-
         width 2
         active-color "#ffc87f"
         inactive-color "#505050"
-
         urgent-color "#9b0000"
     }
 
     border {
         // off
-
         width 2
         active-color "#ffc87f"
         inactive-color "#505050"
-
         urgent-color "#9b0000"
-
-        // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
-    // You can enable drop shadows for windows.
     /-shadow {
         // on
     }
@@ -108,6 +93,15 @@ layout {
     }
 }
 
+prefer-no-csd
+window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry true
+    background-effect {
+            xray true
+            blur true
+        }
+}
 
 spawn-sh-at-startup "noctalia"
 spawn-sh-at-startup "awww-daemon &"
@@ -121,84 +115,14 @@ hotkey-overlay {
     skip-at-startup
 }
 
-prefer-no-csd
-
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-
-// screenshot-path null
+screenshot-path "~/pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 // Decomment for nixos
 //cursor {
 //    xcursor-theme "Qogir"
 //    xcursor-size 22
 //}
-
-animations {
-    // off
-
-    horizontal-view-movement {
-        // off
-        spring damping-ratio=1.0 stiffness=10000 epsilon=0.001
-    }
-
-    workspace-switch {
-        off
-        spring damping-ratio=1.0 stiffness=10000 epsilon=0.001
-    }
-
-    window-open {
-        off
-    }
-
-    window-close {
-        off
-    }
-
-    window-movement {
-        off
-    }
-
-    window-resize {
-        off
-    }
-
-    config-notification-open-close {
-        off
-    }
-
-    exit-confirmation-open-close {
-        off
-    }
-
-    overview-open-close {
-        off
-    }
-
-}
-
-window-rule {
-
-    match app-id=r#"^firefox"#
-    match app-id=r#"^zen"#
-    match app-id=r#"^helium"#
-    match app-id=r#"^brave-origin"#
-    match app-id=r#"^dev.zed.Zed"#
-    open-maximized true
-}
-
-
-window-rule {
-    geometry-corner-radius 0
-    clip-to-geometry true
-}
-
-layer-rule {
-
-    match namespace="^awww-daemon$"
-    place-within-backdrop true
-}
-
-
+//
 overview {
     workspace-shadow {
         color "#a260f3"
@@ -209,14 +133,55 @@ overview {
     zoom 0.35
 }
 
+blur {
+    // off
+    passes 3      // more passes = stronger blur (default: 3)
+    offset 2.0      // sample distance per pass (default: 3.0)
+    noise 0.0      // grain overlay (default: 0.02)
+    saturation 2
+}
+
+animations {
+    // off
+    horizontal-view-movement { spring damping-ratio=2.0 stiffness=10000 epsilon=0.001; }
+    workspace-switch { off; spring damping-ratio=1.0 stiffness=10000 epsilon=0.001; }
+    window-open { off; }
+    window-close { off; }
+    window-movement { off; }
+    window-resize { off; }
+    config-notification-open-close { off; }
+    exit-confirmation-open-close { off; }
+    overview-open-close { off; }
+}
+
+window-rule {
+    match app-id=r#"^firefox"#
+    match app-id=r#"^zen"#
+    match app-id=r#"^helium"#
+    match app-id=r#"^brave-origin"#
+    match app-id=r#"^dev.zed.Zed"#
+    open-maximized true
+}
+
+
+
+layer-rule {
+
+    match namespace="^awww-daemon$"
+    place-within-backdrop true
+}
+
+
+
 binds {
 
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+Alt+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+E hotkey-overlay-title="Run a Code Editor: zed editor" { spawn "zeditor"; }
     Mod+D hotkey-overlay-title="Run a Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+Alt+D hotkey-overlay-title="Run a Launcher: rofi" { spawn-sh "/home/sicko/.config/rofi/launchers/type-5/launcher.sh"; }
+    Mod+Alt+D hotkey-overlay-title="Run a Launcher: rofi" { spawn-sh "/home/sicko/.config/rofi/launchers/type-1/launcher.sh"; }
     Mod+B hotkey-overlay-title="Run an Browser: brave-origin" { spawn "brave-origin"; }
     Mod+Alt+L hotkey-overlay-title="Show noctalia session menu" { spawn-sh "noctalia msg panel-toggle session"; }
 

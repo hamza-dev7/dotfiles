@@ -1,6 +1,11 @@
 # ~/.config/zsh/env.zsh
 
+# Set up emacs mode
+bindkey -e
+
+# Set up zoxide
 eval "$(zoxide init zsh)"
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 export FZF_DEFAULT_OPTS=" \

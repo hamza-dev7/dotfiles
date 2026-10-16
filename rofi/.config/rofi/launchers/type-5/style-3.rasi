@@ -21,12 +21,12 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    background:                  #110118;
-    background-alt:              #270337;
-    foreground:                  #FFFFFFFF;
-    selected:                    #772e96;
-    active:                      #98C379FF;
-    urgent:                      #E06B74FF;
+    background:                  #1E1D2FFF;
+    background-alt:              #282839FF;
+    foreground:                  #D9E0EEFF;
+    selected:                    #cba6f7;
+    active:                      #ABE9B3FF;
+    urgent:                      #F28FADFF;
 
     font:                        "JetBrains Mono Nerd Font Propo 10";
 }
