@@ -23,5 +23,5 @@ stow fuzzel kitty niri noctalia zed zsh zshrc
 
 ## run to install all tpkgs used in the dotfiles
 ```shell
-sudo pacman -S --needed - < ~/explicit-packages.txt
+sudo pacman -S --needed - < .pkglist.txt
 ```
