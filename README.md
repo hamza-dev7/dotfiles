@@ -1,6 +1,6 @@
 # dotfiles
 
-## run to install all the neede pkgs
+## run to install all the needed packages
 ```shell
 sudo pacman -S --needed git stow
 ```
@@ -21,7 +21,7 @@ git submodule update --init --recursive
 stow fuzzel kitty niri noctalia zed zsh zshrc
 ```
 
-## run to install all tpkgs used in the dotfiles
+## run to install all the packages used in the dotfiles
 ```shell
 sudo pacman -S --needed - < .pkglist.txt
 ```
