@@ -9,24 +9,37 @@
 
 
 {
+  "inlay_hints": {
+    "enabled": true
+  },
+  "languages": {
+    "Python": {
+      "show_edit_predictions": true
+    }
+  },
   "buffer_font_size": 14.0,
   "terminal": {
-    
+
   },
   "window_decorations": "server",
   "title_bar": {
     "show_branch_status_icon": false
   },
   "edit_predictions": {
+    "open_ai_compatible_api": {
+      "prompt_format": "code_gemma",
+      "model": "google/gemma-4-26b-a4b-it:free",
+      "api_url": "https://openrouter.ai/api/v1/completions"
+    },
     "disabled_globs": [
       "..."
     ],
-    "allow_data_collection": "yes",
+    "allow_data_collection": "no",
     "copilot": {
       "prediction_debounce": 0,
       "enable_next_edit_suggestions": true
     },
-    "provider": "copilot"
+    "provider": "mercury"
   },
 
   "cli_default_open_behavior": "new_window",
@@ -36,11 +49,13 @@
 
   "agent_servers": {
     "opencode": {
+      "type": "custom",
+      "command": "opencode",
+      "args": ["acp"],
       "default_config_options": {
         "mode": "plan",
-        "model": "opencode/nemotron-3-ultra-free"
+        "model": "opencode/deepseek-v4.1-flash-free"
       },
-      "type": "registry"
     }
   },
 
@@ -53,7 +68,7 @@
     "dock": "left"
   },
 
-  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "icon_theme": "Colored Zed Icons Theme Dark",
   "collaboration_panel": {
     "button": false
   },
@@ -79,7 +94,7 @@
     "dark": "Catppuccin Mocha"
   },
 
-"theme_overrides": {
+  "theme_overrides": {
     "Catppuccin Mocha": {
       "status_bar.background": "#1e1e2e",
       "title_bar.background": "#1e1e2e",
@@ -91,5 +106,32 @@
       "panel.background": "#1a1a29",
       "surface.background": "#1a1a29",
     }
+  },
+
+  "auto_install_extensions": {
+    "aura-theme": true,
+    "catppuccin": true,
+    "catppuccin-blur": true,
+    "catppuccin-black-theme": true,
+    "modest-dark": true,
+    "one-dark-pro-max": true,
+    "oxocarbon": true,
+    "rose-pine-theme": true,
+    "tokyo-night": true,
+    "vercel-carbon-theme": true,
+
+    "colored-zed-icons-theme": true,
+    "jetbrains-new-ui-icons": true,
+    "material-icon-theme": true,
+
+    "desktop": true,
+    "kdl": true,
+    "latex": true,
+    "latex-snippets": true,
+    "lua": true,
+    "rasi": true,
+    "toml": true,
+    "color-highlight": true,
+    "html": true
   }
 }

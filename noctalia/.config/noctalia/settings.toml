@@ -1,9 +1,9 @@
 config_version = 14
-
 [accessibility]
 ui_scale = 0.95000000670552254
 
 [bar.default]
+background_opacity = 0.79999998211860657
 capsule = true
 capsule_fill = "surface_variant"
 capsule_foreground = "primary"
@@ -79,6 +79,7 @@ enabled = [ "luochen1990/niri-ribbon", "teagar/niri-workspace-preview" ]
 [shell]
 app_icon_color = "primary"
 app_icon_colorize = false
+avatar_path = "/home/sicko/pictures/wallpapers/p_mount.jpg"
 button_borders = false
 card_borders = false
 input_borders = false
@@ -87,6 +88,18 @@ popup_borders = false
     [shell.animation]
     enabled = false
 
+    [shell.launcher]
+    app_grid = true
+    category_icons_only = true
+    fetch_exchange_rates = false
+    layout = "simple"
+    show_session_button = false
+    show_settings_button = false
+    width = 650
+
+    [shell.panel]
+    launcher_placement = "attached"
+
 [theme]
 builtin = "Ayu"
 community_palette = "Catppuccin Mocha Mauve-Lavender"
@@ -94,7 +107,7 @@ custom_palette = "Catppuccin_Mocha_Mauve"
 source = "community"
 
     [theme.templates]
-    builtin_ids = [ "btop", "ghostty", "kitty", "niri" ]
+    builtin_ids = [ "btop", "kitty", "niri" ]
     community_ids = []
 
 [wallpaper]
