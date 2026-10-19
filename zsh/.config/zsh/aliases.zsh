@@ -1,8 +1,13 @@
 # ~/.config/zsh/aliases.zsh
 
-alias zed='zeditor'
+alias pi='sudo pacman -S'       # Install
+alias pr='sudo pacman -Rns'     # Remove
+alias pq='pacman -Q'            # Query installed packages
+alias ps='pacman -Ss'           # Search repositories
+
 alias ls='exa -l'
 alias cd='z'
+alias zed='zeditor'
 alias rebuild='sudo nixos-rebuild switch --impure'
 alias nocsync='noctalia config export merged'
 alias pyrun='echo export LD_LIBRARY_PATH=\"\$NIX_LD_LIBRARY_PATH\" >> .venv/bin/activate'

@@ -107,12 +107,12 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 6,
+        rounding       = 0,
         rounding_power = 3,
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.0,
-        inactive_opacity = 0.97,
+        inactive_opacity = 0.90,
 
         shadow = {
             enabled      = false,
@@ -124,8 +124,10 @@ hl.config({
         blur = {
             enabled   = true,
             size      = 3,
-            passes    = 1,
-            vibrancy  = 0.1696,
+            passes    = 2,
+            vibrancy = 0.1696,
+            new_optimizations = true,
+            xray = true
         },
     },
 
@@ -191,7 +193,7 @@ hl.config({
 hl.config({
     master = {
         new_status = "slave",
-        mfact = 0.58,
+        mfact = 0.53,
     },
 })
 
@@ -390,3 +392,6 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+-- For Noctalia Color templates
+require("noctalia").apply_theme()

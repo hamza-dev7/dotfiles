@@ -1,4 +1,5 @@
 config_version = 14
+
 [accessibility]
 ui_scale = 0.95000000670552254
 
@@ -18,7 +19,7 @@ radius_bottom_right = 12
 radius_top_left = 4
 radius_top_right = 4
 scale = 0.95000000670552254
-start = [ "active_window", "ribbon" ]
+start = [ "group:g1", "ribbon" ]
 thickness = 27
 
     [[bar.default.capsule_group]]
@@ -33,8 +34,26 @@ thickness = 27
     opacity = 1.0
     padding = 6.0
 
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    border_width = 1.0
+    enabled = true
+    fill = "surface_variant"
+    foreground = "primary"
+    id = "g1"
+    members = [ "active_window", "active-workspace" ]
+    opacity = 1.0
+    padding = 6.0
+    radius = 12.0
+
 [control_center]
 hidden_tabs = [ "media", "monitor", "system", "weather" ]
+
+[lockscreen]
+blurred_desktop = true
+transition = []
+wallpaper = "/home/sicko/pictures/wallpapers/cartoon-castle.png"
 
 [lockscreen_widgets]
 enabled = false
@@ -74,7 +93,7 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
         show_weather = true
 
 [plugins]
-enabled = [ "luochen1990/niri-ribbon", "teagar/niri-workspace-preview" ]
+enabled = [ "luochen1990/niri-ribbon", "teagar/niri-workspace-preview", "salemsayed/niri-active-workspace" ]
 
 [shell]
 app_icon_color = "primary"
@@ -83,6 +102,7 @@ avatar_path = "/home/sicko/pictures/wallpapers/p_mount.jpg"
 button_borders = false
 card_borders = false
 input_borders = false
+niri_overview_type_to_launch_enabled = true
 popup_borders = false
 
     [shell.animation]
@@ -100,6 +120,44 @@ popup_borders = false
     [shell.panel]
     launcher_placement = "attached"
 
+    [shell.session]
+    show_shortcuts = false
+
+        [[shell.session.actions]]
+        action = "lock"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "1"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "logout"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "2"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "reboot"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "3"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "shutdown"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "4"
+        variant = "destructive"
+
+        [[shell.session.actions]]
+        action = "lock_and_suspend"
+        countdown_seconds = 0.0
+        enabled = false
+        shortcut = "5"
+        variant = "default"
+
 [theme]
 builtin = "Ayu"
 community_palette = "Catppuccin Mocha Mauve-Lavender"
@@ -107,20 +165,26 @@ custom_palette = "Catppuccin_Mocha_Mauve"
 source = "community"
 
     [theme.templates]
-    builtin_ids = [ "btop", "kitty", "niri" ]
-    community_ids = []
+    builtin_ids = [ "btop", "hyprland", "kitty", "niri" ]
+    community_ids = [ "zed" ]
 
 [wallpaper]
 enabled = false
 
     [wallpaper.default]
-    path = "/home/sicko/Pictures/Wallpapers/fuji-mountain-milky-way-night.jpg"
+    path = "/home/sicko/pictures/wallpapers/p_mount.jpg"
 
     [wallpaper.last]
-    path = "/home/sicko/Pictures/Wallpapers/fuji-mountain-milky-way-night.jpg"
+    path = "/home/sicko/pictures/wallpapers/p_mount.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/sicko/Pictures/Wallpapers/fuji-mountain-milky-way-night.jpg"
+    path = "/home/sicko/pictures/wallpapers/p_mount.jpg"
+
+[widget.active-workspace]
+enable_scroll = false
+glyph = ""
+label_mode = "index"
+type = "salemsayed/niri-active-workspace:active-workspace"
 
 [widget.active_window]
 display = "icon_only"
@@ -144,7 +208,7 @@ show_label = false
 glyph = "brand-adobe"
 
 [widget.date]
-format = "{:%d - %I:%M %p}"
+format = "{:%d - %I:%M}"
 
 [widget.media]
 color = "primary"
@@ -163,14 +227,14 @@ type = "luochen1990/niri-ribbon:ribbon"
 show_label = false
 
 [widget.workspaces]
-active_pill_size = 7.0
+active_pill_size = 5.0
 empty_color = "surface"
 font_family = "JetBrainsMono Nerd Font"
 font_scale = 0.78000000000000003
 font_weight = 800
-inactive_pill_size = 1.8
+inactive_pill_size = 1.0
 labels_only_when_occupied = true
 occupied_color = "secondary"
 pill_scale = 0.65000000000000002
 scale = 0.94999999999999996
-show_labels = true
+show_labels = false

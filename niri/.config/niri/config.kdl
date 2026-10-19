@@ -38,6 +38,7 @@ input {
 
 layout {
     gaps 3
+
     center-focused-column "never"
     background-color "transparent"
 
@@ -68,8 +69,8 @@ layout {
         urgent-color "#9b0000"
     }
 
-    /-shadow {
-        // on
+    shadow {
+        off
     }
 
     // struts {
@@ -183,7 +184,7 @@ binds {
     Mod+D hotkey-overlay-title="Run a Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+Alt+D hotkey-overlay-title="Run a Launcher: rofi" { spawn-sh "/home/sicko/.config/rofi/launchers/type-1/launcher.sh"; }
     Mod+B hotkey-overlay-title="Run an Browser: brave-origin" { spawn "brave-origin"; }
-    Mod+Alt+L hotkey-overlay-title="Show noctalia session menu" { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+S hotkey-overlay-title="Show noctalia session menu" { spawn-sh "noctalia msg panel-toggle session"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
@@ -347,7 +348,6 @@ binds {
 
     Mod+Shift+P { power-off-monitors; }
 }
-
 
 
 
