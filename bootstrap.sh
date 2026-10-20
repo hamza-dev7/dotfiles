@@ -1,8 +1,22 @@
 #!/usr/bin/env bash
 set -euo pipefail
-cd "$(dirname "$0")"
+cd "$HOME"
+
+DOTFILES_DIR="$HOME/.dotfiles"
+
+sudo pacman -S --needed git stow base-devel
+
+git clone https://github.com/hamza-dev7/dotfiles.git "$DOTFILES_DIR"
+cd "$DOTFILES_DIR"
+
+git submodule update --init --recursive
+
+stow applications env ghostty git niri noctalia rofi wallpapers yazi zed zsh zshrc
 
 sudo pacman -S --needed - < pkglist.txt
+
+sudo install -Db -S .bak -m644 ly/config.ini /etc/ly/config.ini
+
 
 if ! command -v yay &>/dev/null; then
     tmp=$(mktemp -d)
@@ -10,8 +24,3 @@ if ! command -v yay &>/dev/null; then
     (cd "$tmp/yay" && makepkg -si --noconfirm)
     rm -rf "$tmp"
 fi
-
-# AUR packages (install yay/paru first)
-# yay -S --needed - < aur-pkglist.txt
-
-sudo install -Db -S .bak -m644 ly/config.ini /etc/ly/config.ini
