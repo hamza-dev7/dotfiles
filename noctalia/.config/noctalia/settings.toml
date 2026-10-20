@@ -42,13 +42,14 @@ thickness = 27
     fill = "surface_variant"
     foreground = "primary"
     id = "g1"
-    members = [ "active_window", "active-workspace" ]
+    members = [ "active_window", "active-workspace", "spacer-1" ]
     opacity = 1.0
     padding = 6.0
     radius = 12.0
 
 [control_center]
-hidden_tabs = [ "media", "monitor", "system", "weather" ]
+hidden_tabs = [ "monitor", "system", "weather" ]
+sidebar_section = "none"
 
 [lockscreen]
 blurred_desktop = true
@@ -92,6 +93,10 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
         show_unlock_hint = true
         show_weather = true
 
+[osd]
+background_opacity = 0.79999998211860657
+border_color = "primary"
+
 [plugins]
 enabled = [ "luochen1990/niri-ribbon", "teagar/niri-workspace-preview", "salemsayed/niri-active-workspace" ]
 
@@ -101,6 +106,7 @@ app_icon_colorize = false
 avatar_path = "/home/sicko/pictures/wallpapers/p_mount.jpg"
 button_borders = false
 card_borders = false
+font_family = "Adwaita Sans"
 input_borders = false
 niri_overview_type_to_launch_enabled = true
 popup_borders = false
@@ -222,6 +228,10 @@ show_label = false
 [widget.ribbon]
 animation_speed = 2.5
 type = "luochen1990/niri-ribbon:ribbon"
+
+[widget.spacer-1]
+length = 1
+type = "spacer"
 
 [widget.volume]
 show_label = false
