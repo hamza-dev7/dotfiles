@@ -1,5 +1,3 @@
-config_version = 14
-
 [accessibility]
 ui_scale = 0.95000000670552254
 
@@ -19,7 +17,7 @@ radius_bottom_right = 12
 radius_top_left = 4
 radius_top_right = 4
 scale = 0.95000000670552254
-start = [ "group:g1", "ribbon" ]
+start = [ "group:g1", "ribbon_2" ]
 thickness = 27
 
     [[bar.default.capsule_group]]
@@ -227,6 +225,10 @@ show_label = false
 
 [widget.ribbon]
 animation_speed = 2.5
+type = "luochen1990/niri-ribbon:ribbon"
+
+[widget.ribbon_2]
+animation_speed = 3.0
 type = "luochen1990/niri-ribbon:ribbon"
 
 [widget.spacer-1]
