@@ -1,5 +1,6 @@
-git
-base-devel
+xdg-desktop-portal-gnome
+vulkan-intel
+noto-fonts
 niri
 noctalia
 zsh
