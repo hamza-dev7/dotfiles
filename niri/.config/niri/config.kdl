@@ -1,7 +1,7 @@
 input {
     keyboard {
         xkb {
-
+              options "compose:ralt"
         }
     }
 
@@ -145,7 +145,7 @@ blur {
 animations {
     // off
     horizontal-view-movement { spring damping-ratio=2.0 stiffness=10000 epsilon=0.001; }
-    workspace-switch { off; spring damping-ratio=1.0 stiffness=10000 epsilon=0.001; }
+    workspace-switch { spring damping-ratio=1.0 stiffness=10000 epsilon=0.001; }
     window-open { off; }
     window-close { off; }
     window-movement { off; }
@@ -256,8 +256,8 @@ binds {
 
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
+    Mod+I              { focus-workspace-down; }
+    Mod+U              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
     Mod+Ctrl+U         { move-column-to-workspace-down; }

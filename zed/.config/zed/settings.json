@@ -14,9 +14,10 @@
   },
   "languages": {
     "Python": {
-      "show_edit_predictions": true
+      "language_servers": ["pyright", "ruff"]
     }
   },
+
   "buffer_font_size": 14.0,
   "terminal": {
 
@@ -42,7 +43,7 @@
       "prediction_debounce": 0,
       "enable_next_edit_suggestions": true
     },
-    "provider": "codestral"
+    "provider": "mercury"
   },
 
   "cli_default_open_behavior": "new_window",
@@ -57,7 +58,7 @@
       "args": ["acp"],
       "default_config_options": {
         "mode": "plan",
-        "model": "opencode/deepseek-v4.1-flash-free"
+        "model": "openrouter/cohere/north-mini-code:free"
       },
     }
   },
