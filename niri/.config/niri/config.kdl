@@ -73,13 +73,6 @@ layout {
         off
     }
 
-    // struts {
-    //     left 0
-    //     right 0
-    //     top 2
-    //     bottom 0
-    // }
-
     struts {
         left 0
         right 0
@@ -105,8 +98,7 @@ window-rule {
 }
 
 spawn-sh-at-startup "noctalia"
-spawn-sh-at-startup "awww-daemon &"
-// spawn-sh-at-startup "swww-daemon -n overlay &"
+// spawn-sh-at-startup "awww-daemon &"
 
 environment {
   QT_QPA_PLATFORMTHEME "qt6ct"
@@ -118,17 +110,9 @@ hotkey-overlay {
 
 screenshot-path "~/pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-// Decomment for nixos
-//cursor {
-//    xcursor-theme "Qogir"
-//    xcursor-size 22
-//}
-//
 overview {
     workspace-shadow {
-        color "#a260f3"
-        softness 1
-        spread 5
+        // color "black"
         offset x=0 y=0
     }
     zoom 0.35
@@ -167,12 +151,10 @@ window-rule {
 
 
 layer-rule {
-
+    match namespace="^noctalia-wallpaper"
     match namespace="^awww-daemon$"
     place-within-backdrop true
 }
-
-
 
 binds {
 
@@ -183,8 +165,10 @@ binds {
     Mod+E hotkey-overlay-title="Run a Code Editor: zed editor" { spawn "zeditor"; }
     Mod+D hotkey-overlay-title="Run a Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+Alt+D hotkey-overlay-title="Run a Launcher: rofi" { spawn-sh "/home/sicko/.config/rofi/launchers/type-1/launcher.sh"; }
-    Mod+B hotkey-overlay-title="Run an Browser: brave-origin" { spawn "brave-origin"; }
+    Mod+B hotkey-overlay-title="Run an Browser: brave-origin" { spawn-sh "brave-origin --profile-directory='Default'"; }
+    Mod+Alt+B hotkey-overlay-title="Run an Browser: brave-origin 2nd profile" { spawn-sh "brave-origin --profile-directory='Profile 1'"; }
     Mod+S hotkey-overlay-title="Show noctalia session menu" { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+P hotkey-overlay-title="Pick color: hyprpicker" { spawn-sh "hyprpicker | wl-copy"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
@@ -260,13 +244,13 @@ binds {
     Mod+U              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    Mod+Ctrl+U         { move-column-to-workspace-down; }
-    Mod+Ctrl+I         { move-column-to-workspace-up; }
+    Mod+Ctrl+I         { move-column-to-workspace-down; }
+    Mod+Ctrl+U         { move-column-to-workspace-up; }
 
     Mod+Shift+Page_Down { move-workspace-down; }
     Mod+Shift+Page_Up   { move-workspace-up; }
-    Mod+Shift+U         { move-workspace-down; }
-    Mod+Shift+I         { move-workspace-up; }
+    Mod+Shift+I         { move-workspace-down; }
+    Mod+Shift+U         { move-workspace-up; }
 
     Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }

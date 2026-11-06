@@ -38,3 +38,5 @@ python-lsp-server
 opencode
 qt6ct
 bat
+hyprpicker
+wl-copy

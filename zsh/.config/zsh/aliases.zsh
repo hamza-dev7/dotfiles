@@ -4,6 +4,7 @@ alias pi='sudo pacman -S'       # Install
 alias pr='sudo pacman -Rns'     # Remove
 alias pq='pacman -Q'            # Query installed packages
 alias ps='pacman -Ss'           # Search repositories
+alias pu='sudo pacman -Syu'      # Update system
 
 alias ls='exa -l'
 alias cd='z'

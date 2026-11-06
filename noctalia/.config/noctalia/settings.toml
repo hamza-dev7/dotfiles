@@ -1,10 +1,14 @@
 [accessibility]
 ui_scale = 0.95000000670552254
 
+[backdrop]
+blur_intensity = 0.29999999329447746
+tint_intensity = 0.099999997764825821
+
 [bar.default]
 background_opacity = 0.79999998211860657
 capsule = false
-capsule_fill = "surface_variant"
+capsule_fill = "surface_container"
 capsule_foreground = "primary"
 capsule_group = []
 capsule_opacity = 0.89999997988343239
@@ -12,7 +16,7 @@ capsule_padding = 7.0
 capsule_radius = 12
 capsule_thickness = 0.69999998807907104
 center = [ "date", "media" ]
-end = [ "tray", "network", "volume", "brightness", "battery" ]
+end = [ "tray", "widget", "network", "volume", "brightness", "battery" ]
 margin_ends = 200
 padding = 10
 radius_bottom_left = 12
@@ -21,7 +25,7 @@ radius_top_left = 4
 radius_top_right = 4
 scale = 0.95000000670552254
 shadow = false
-start = [ "workspaces" ]
+start = [ "workspaces", "toggle" ]
 thickness = 27
 widget_spacing = 6
 
@@ -29,13 +33,16 @@ widget_spacing = 6
 hidden_tabs = [ "monitor", "system", "weather" ]
 sidebar_section = "none"
 
+[location]
+auto_locate = true
+
 [lockscreen]
 blurred_desktop = true
 transition = []
 wallpaper = "/home/sicko/pictures/wallpapers/cartoon-castle.png"
 
 [lockscreen_widgets]
-enabled = false
+enabled = true
 schema_version = 2
 widget_order = [ "lockscreen-login-box@eDP-1" ]
 
@@ -45,10 +52,10 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
-    box_height = 196.0
-    box_width = 810.0
+    box_height = 150.0
+    box_width = 720.0
     cx = 683.0
-    cy = 586.0
+    cy = 384.0
     output = "eDP-1"
     placement_height = 768.0
     placement_width = 1366.0
@@ -56,10 +63,10 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
-        center_password_text = false
+        center_password_text = true
         input_opacity = 1.0
         input_radius = 6.0
         layout = "regular"
@@ -67,16 +74,23 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
-        show_session_buttons = true
-        show_unlock_hint = true
-        show_weather = true
+        show_password_reveal = true
+        show_session_buttons = false
+        show_unlock_hint = false
+        show_weather = false
 
 [osd]
 background_opacity = 0.79999998211860657
 border_color = "primary"
 
 [plugins]
-enabled = [ "luochen1990/niri-ribbon", "teagar/niri-workspace-preview", "salemsayed/niri-active-workspace" ]
+enabled = [
+    "luochen1990/niri-ribbon",
+    "teagar/niri-workspace-preview",
+    "salemsayed/niri-active-workspace",
+    "oldirtty/color_picker",
+    "0lucasmatheus/awwwall"
+]
 
 [shell]
 app_icon_color = "primary"
@@ -84,7 +98,7 @@ app_icon_colorize = false
 avatar_path = "/home/sicko/pictures/wallpapers/p_mount.jpg"
 button_borders = false
 card_borders = false
-font_family = "Noto Sans Arabic"
+font_family = "Adwaita Sans"
 input_borders = false
 niri_overview_type_to_launch_enabled = true
 popup_borders = false
@@ -143,26 +157,30 @@ popup_borders = false
         variant = "default"
 
 [theme]
-builtin = "Ayu"
+builtin = "Catppuccin"
 community_palette = "Catppuccin Mocha Mauve-Lavender"
 custom_palette = "Catppuccin_Mocha_Mauve"
+mode = "dark"
 source = "community"
+wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "hyprland", "kitty", "niri" ]
     community_ids = [ "zed" ]
 
 [wallpaper]
+directory = "/home/sicko/pictures/wallpapers"
 enabled = false
+transition = [ "disc", "fade" ]
 
     [wallpaper.default]
-    path = "/home/sicko/pictures/wallpapers/p_mount.jpg"
+    path = "/home/sicko/pictures/wallpapers/cartoon-castle.png"
 
     [wallpaper.last]
-    path = "/home/sicko/pictures/wallpapers/p_mount.jpg"
+    path = "/home/sicko/pictures/wallpapers/cartoon-castle.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/sicko/pictures/wallpapers/p_mount.jpg"
+    path = "/home/sicko/pictures/wallpapers/cartoon-castle.png"
 
 [widget.active-workspace]
 enable_scroll = false
@@ -179,7 +197,7 @@ title_scroll = "on_hover"
 
 [widget.audio_visualizer]
 bands = 20
-color_2 = "surface_variant"
+color_2 = "surface_container"
 scale = 0.80000000000000004
 width = 30
 
@@ -195,7 +213,7 @@ glyph = "keyframe-align-center-filled"
 
 [widget.date]
 anchor = true
-format = "{:%d - %I:%M}"
+format = "{:%d – %I:%M}"
 
 [widget.media]
 album_art_only = true
@@ -224,8 +242,15 @@ type = "luochen1990/niri-ribbon:ribbon"
 length = 1
 type = "spacer"
 
+[widget.toggle]
+type = "0lucasmatheus/awwwall:toggle"
+
 [widget.volume]
 show_label = false
+
+[widget.widget]
+glyph = "color-picker"
+type = "oldirtty/color_picker:widget"
 
 [widget.workspaces]
 active_pill_size = 3.5

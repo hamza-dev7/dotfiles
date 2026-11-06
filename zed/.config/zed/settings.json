@@ -9,6 +9,10 @@
 
 
 {
+  "prettier": {
+    "parser": "",
+    "allowed": true
+  },
   "inlay_hints": {
     "enabled": true
   },
@@ -18,7 +22,7 @@
     }
   },
 
-  "buffer_font_size": 14.0,
+  "buffer_font_size": 12.0,
   "terminal": {
 
   },
@@ -57,8 +61,8 @@
       "command": "opencode",
       "args": ["acp"],
       "default_config_options": {
-        "mode": "plan",
-        "model": "openrouter/cohere/north-mini-code:free"
+        "mode": "build",
+        "model": "opencode/glm-5.3-flash-free"
       },
     }
   },
@@ -94,7 +98,7 @@
   "ui_font_size": 15.0,
   "theme": {
     "mode": "dark",
-    "light": "Vercel Dark",
+    "light": "Catppuccin Latte",
     "dark": "Catppuccin Mocha"
   },
 
