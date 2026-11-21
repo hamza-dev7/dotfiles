@@ -9,6 +9,7 @@
 
 
 {
+  "show_edit_predictions": true,
   "prettier": {
     "parser": "",
     "allowed": true
@@ -61,8 +62,9 @@
       "command": "opencode",
       "args": ["acp"],
       "default_config_options": {
+        "effort": "max",
         "mode": "build",
-        "model": "opencode/glm-5.3-flash-free"
+        "model": "opencode/minimax-m3.1-flash-free"
       },
     }
   },

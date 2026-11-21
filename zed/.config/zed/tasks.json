@@ -1,0 +1,8 @@
+[
+  {
+    "label": "live server",
+    "command": "bunx live-server . --port 3000",
+    "use_new_terminal": true,
+    "hide": "always"
+  }
+]

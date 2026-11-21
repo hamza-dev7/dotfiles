@@ -164,7 +164,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+E hotkey-overlay-title="Run a Code Editor: zed editor" { spawn "zeditor"; }
     Mod+D hotkey-overlay-title="Run a Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+Alt+D hotkey-overlay-title="Run a Launcher: rofi" { spawn-sh "/home/sicko/.config/rofi/launchers/type-1/launcher.sh"; }
+    Mod+Alt+D hotkey-overlay-title="Run a Launcher: rofi" { spawn-sh "/home/sicko/.config/rofi/launchers/launcher.sh"; }
     Mod+B hotkey-overlay-title="Run an Browser: brave-origin" { spawn-sh "brave-origin --profile-directory='Default'"; }
     Mod+Alt+B hotkey-overlay-title="Run an Browser: brave-origin 2nd profile" { spawn-sh "brave-origin --profile-directory='Profile 1'"; }
     Mod+S hotkey-overlay-title="Show noctalia session menu" { spawn-sh "noctalia msg panel-toggle session"; }
